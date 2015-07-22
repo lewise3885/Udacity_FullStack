@@ -21,10 +21,11 @@ Under the Downloads>python_code folder there is a file called movie_script.py
 
     -rating_stars :: Once the movie rating is acquired from IMDB, this function takes that value, cleans it and converts it from string to a proper numeric that value Python can read. A while loop finds out how many whole and partial stars need to be written, then creates empty stars for the remainder.
   3. There is a variable called myFavMovies which is a list of my movies broken into two parts:
-		31. imdbId: used to strap the imdb url to grab values ie: title, image, description, rating.
-		32. youtubeId: used to input the video ID into the dynamic html data attribute for later use via trailer loading javascript.
-		33. Ex. [{'imdbId':'tt0089114','youtubeId':'3X3VxBJzH68'}]
- 3. Once you have gathered your list of favorite movies with the youtube videos you're satisfied with, save and close the file.
- 4. The file when executed (with internet avalible), will create / render, and open into your default browser a HTML file named movies.html.
+	1. imdbId: used to strap the imdb url to grab values ie: title, image, description, rating.
+	2. youtubeId: used to input the video ID into the dynamic html data attribute for later use via trailer loading javascript.
+	3. Ex. [{'imdbId':'tt0089114','youtubeId':'3X3VxBJzH68'}]
+ 4. Once you have gathered your list of favorite movies with the youtube videos you're satisfied with, save and close the file.
+ 5. The file when executed (with internet avalible), will create / render, and open into your default browser a HTML file named movies.html.
+
 # Chrome Error Notice
  If you're using a chromium browser with no chromecast plugin installed, 6 errors will be displayed in the log. Unfortunately the Chromecast team will not resolve this issue. For more information refer to the following link. http://stackoverflow.com/questions/24490323/google-chrome-cast-sender-error-if-chrome-cast-extension-is-not-installed-or-usi 
