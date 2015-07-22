@@ -7,13 +7,13 @@ import urllib, os, webbrowser, re
 
 # Movie List:
 #	This is a list of my movies broken into two parts:
-#		imdbId: used to strap the imdb url to grab values ie: title, image, description, rating
-#		youtubeId: used to input to youtube video ID into the dynamic html data attribute for later use via trailer loading javascript 
+#		imdbId: used to strip the imdb url to grab values ie: title, image, description, rating
+#		youtubeId: used to input the video ID into the dynamic html data attribute for later use via trailer loading javascript 
 myFavMovies = [{'imdbId':'tt0089114','youtubeId':'3X3VxBJzH68'},{'imdbId':'tt0091949','youtubeId':'9rlI3Xg9g_A'},{'imdbId':'tt0091993','youtubeId':'0Umy8VTiKG4'},{'imdbId':'tt0093936','youtubeId':'vwXDxukH7W8'}, {'imdbId':'tt0083944','youtubeId':'rjptQSfuTy8'},{'imdbId':'tt2234155','youtubeId':'cdnoqCViqUo'}]
 
 # Gms: [Get movies]
 #	Purpose:: 
-#		Used to grabbed the movie list and strap the imdb to isolate the needed values, 
+#		Used to grab the movie list and strip the imdb url to isolate the needed values, 
 #		convert to star ratings numeric to chars to populate the movie dynamic html to 
 #		temporary string to input to the main variable called "web" 
 def gms(movies):
