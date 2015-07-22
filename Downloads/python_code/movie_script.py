@@ -1,12 +1,12 @@
 # Import of the following libs:
 #  urllib: used to strap or grab the needed urls to be placed into a
 #   variable for later use
-#  os: more of a just incase lib to connect to Operating System's command
-#   line <= but was never used in this build
+#  os: more of a just incase lib to connect to Operating System's
+#   command line <= but was never used in this build
 #  webbrowser: only purpose in this build was to open a browser to my
 #   compiled webpage
-#  re: used to search and isolate current portions of the straped HTML via
-#   urllib main to acquire needed values
+#  re: used to search and isolate current portions of the straped HTML
+#   via urllib main to acquire needed values
 
 
 import urllib
@@ -83,8 +83,8 @@ def gms(movies):
 #     this function takes that value and cleans it and converts
 #     it from string to a proper numeric value Python can read.
 #     Once the value is cleaned. A while loop finds out how many whole,
-#     decimal stars that needs to be written, then for the reminder create
-#     empty stars
+#     decimal stars that needs to be written, then for the reminder
+#     createempty stars
 
 
 def rating_stars(rc):
@@ -126,7 +126,8 @@ def rating_stars(rc):
 #   Example::
 #    addext('css','http://localhost/hi.css')
 #   Result::
-#    <link rel="stylesheet" type="text/css" href="http://localhost/hi.css" />
+#    <link rel="stylesheet" type="text/css"
+#     href="http://localhost/hi.css" />
 
 
 def addext(filetype, files):
@@ -272,8 +273,16 @@ li#movieRating {
   font-weight: bold;
   color: blue;
 }
-body .movie_trailer_list{opacity: 1;position: relative;z-index: 0;}
-body.activeVid .movie_trailer_list{opacity: .2;position: relative;z-index: -1;}
+body .movie_trailer_list{
+  opacity: 1;
+  position: relative;
+  z-index: 0;
+}
+body.activeVid .movie_trailer_list{
+  opacity: .2;
+  position: relative;
+  z-index: -1;
+}
 body .vid_trailer{display: none;}
 body.activeVid .vid_trailer {
   display: inline-block;
@@ -331,13 +340,15 @@ var player;
 
 /*
     call_youtube_video function works hand and hand with the external
-    imported libraryyoutube iframe api {YT.Player} to produce html5 playback
-    to I can isolate when the video stop and to close the trailer window
+    imported library youtube iframe api {YT.Player} to produce html5
+    playback to I can isolate when the video stop and to close the
+    trailer window
 */
 function call_youtube_video(elem) {
     var r = $('.vid_trailer_video').parent();
     r.html('<div class="vid_trailer_video"></div>');
-    if($('body').hasClass('activeVid')){}else{$('body').addClass('activeVid')}
+    if($('body').hasClass('activeVid')){}
+    else{$('body').addClass('activeVid')}
     if(elem.attr('data-video').length == 0){
         var msg = "Sorry this Movie does not have a trailer. But you " +
         "can view it's description and info at imdb's link below"
@@ -422,7 +433,9 @@ $(function(){
 web = '''<!DOCTYPE html>
 <html>
     <head>
-        <title>Movie Trailer Website Project for FullStack Nanodegree</title>
+        <title>
+        Movie Trailer Website Project for FullStack Nanodegree
+        </title>
         {headerCss_ext}
         {headerCss}
         {headerJs_ext}
@@ -431,7 +444,7 @@ web = '''<!DOCTYPE html>
     <body>
         <!-- Video Trailer Content Holder -->
         <div class="vid_trailer">
-            <!-- Wrapper being dynamically rebuilt the clients selection -->
+            <!-- Wrapper dynamically rebuilt the clients selection -->
             <div class="vid_wrapper">
                 <div class="vid_trailer_video"></div>
             </div>
@@ -478,22 +491,23 @@ webpage = open('movies.html', 'w')
 webpage.truncate()
 
 
-# Write newly compiled data from the variable web to the currently opened,
-#  completely empty file AKA: movies.html
+# Write newly compiled data from the variable web to the currently
+#  opened, completely empty file AKA: movies.html
 
 
 webpage.write(web)
 
 
-# The close command will save and close all modications if any was committed
-#  and no modications it was just simpley close the file
+# The close command will save and close all modications if any was
+#  committed and no modications it was just simpley close the file
 
 
 webpage.close()
 
 
-# This will try to open a new browser tab to your default and or specified
-#  browser aswell as to open the currently close file : movies.html
+# This will try to open a new browser tab to your default and or
+#  specified browser aswell as to open the currently close
+#  file : movies.html
 
 
 webbrowser.open('file://' + os.path.abspath(webpage.name), new=2)
