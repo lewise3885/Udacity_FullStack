@@ -8,7 +8,12 @@ Under the Downloads>python_code folder there is a file called movie_script.py
 -- Purpose of this file is to gather and create/render an HTML page that will display movie trailers with the ability to watch from within the page without redirects. 
  -Clicking on any of the box art will activate the trailer functionality.
  -Clicking on any of the hyperlinks will try to open a new tab view in your browser and redirect you to an IMDB link of your choice.
- 
+
+# How to Run
+ Once you download the file, remember the location. Then simply open your terminal console and direct it to the path (if you downloaded the file via the console then this is unneeded unless you specified the different directory) and type in the following:
+ python movie_script.py
+# That's it :D
+
 # How it Works
  1. This is a Python build
  2. There are three functions that do the majority of the heavy lifting to gather and dynamically build the HTML.
